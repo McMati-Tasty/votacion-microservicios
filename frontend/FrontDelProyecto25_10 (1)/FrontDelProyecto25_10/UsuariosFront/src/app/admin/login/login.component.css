@@ -1,0 +1,183 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.navbar .container {
+  justify-content: space-between;
+  padding: 0 250px; 
+}
+
+@media (max-width: 992px) {
+  .navbar .container {
+    padding: 0 40px;
+  }
+}
+
+.main {
+  width: 380px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+  padding: 30px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin-top: -350px;
+  margin-bottom: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 50px 0 20px 0;
+}
+
+.navbar .d-flex img {
+  position: relative;
+  top: -6px;
+}
+
+.footer-institucional {
+  width: 100%;
+  background-color: #555;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-top: 1px solid #444;
+  text-align: right;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  margin-top: -130px;
+  padding-top: 10px;
+}
+
+.footer-contenido {
+  text-align: right;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
+.bloque-institucional {
+  width: 100vw;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 1.8rem 1rem;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  position: relative;
+  left: 0;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.contenido-bloque h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.contenido-bloque p {
+  margin: 8px 0 2px;
+  font-size: 1rem;
+  color: #e0e0e0;
+  font-weight: 400;
+}
+
+.contenido-bloque span {
+  display: block;
+  font-size: 0.95rem;
+  color: #cfcfcf;
+}
+
+label {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: block;
+  color: #333;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 20px;
+  margin: 10px 0;
+  width: 85%;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
+}
+
+
+.login-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; 
+  margin-top: 15px;
+  align-items: center;
+}
+
+button {
+  background-color: #56baed;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 85%;
+}
+
+button:hover {
+  background-color: #39ace7;
+  transform: scale(1.03);
+}
+
+.invalid-feedback {
+  display: block;
+  color: #e74c3c;
+  font-size: 0.9em;
+  margin-top: -10px;
+}
+
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn ease-in 1 forwards;
+  animation-duration: 1s;
+}
+
+.fadeIn.second { animation-delay: 0.4s; }
+.fadeIn.third { animation-delay: 0.6s; }
+.fadeIn.fourth { animation-delay: 0.8s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

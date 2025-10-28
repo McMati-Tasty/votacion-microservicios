@@ -1,0 +1,106 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand d-flex align-items-center" href="javascript:void(0)">
+      <img src="/assets/imagenes/imagen_2.png" width="40" height="50" alt="Logo JNE" class="me-2">
+      <span class="fw-bold text-dark">Justicia Nacional Electoral</span>
+    </a>
+    <div class="d-flex align-items-center">
+      <img src="/assets/imagenes/padron_1.png" width="40" height="40" alt="Logo CNE" class="me-2">
+      <span class="fw-bold text-dark">CNE - Cámara Nacional Electoral</span>
+    </div>
+  </div>
+</nav>
+
+<div class="bloque-institucional">
+  <div class="contenido-bloque">
+    <h2>EMITIR VOTO</h2>
+    <p>Elecciones Nacionales</p>
+    <span>26 de Octubre de 2025</span>
+  </div>
+</div>
+
+<div class="main-content">
+  
+  <div *ngIf="cargandoCandidatos" class="text-center mt-5">
+    <div class="spinner-border text-primary" role="status"></div>
+    <p class="mt-2">Cargando candidatos...</p>
+  </div>
+  <div *ngIf="errorMensaje && !cargandoCandidatos" class="alert alert-danger mt-4">
+    {{ errorMensaje }}
+  </div>
+
+  <div *ngIf="!cargandoCandidatos && listaCompletaCandidatos.length > 0">
+    
+    <h3 class="text-center mb-4">Seleccione su voto</h3>
+    <p class="text-center text-muted mb-4">Puede "cortar boleta" o votar en blanco deseleccionando al candidato.</p>
+
+    <form [formGroup]="votoForm" (ngSubmit)="confirmarVoto()">
+
+      <div class="voto-container">
+
+        <div class="cargo-columna">
+          <h4>Presidente</h4>
+          <div class="candidatos-lista">
+            <div *ngFor="let c of presidentes" 
+                 class="boleta-card"
+                 [class.selected]="votoForm.get('idPresidente')?.value === c.id_candidato"
+                 (click)="seleccionarCandidato('idPresidente', c.id_candidato)">
+              
+              <img [src]="c.imagen_candidato || '/assets/imagenes/user-default.png'" alt="Foto">
+              <div class="boleta-info">
+                <span class="boleta-nombre">{{ c.nombre_candidato }} {{ c.apellido_candidato }}</span>
+                <span class="boleta-partido">{{ c.partido }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cargo-columna">
+          <h4>Vicepresidente</h4>
+          <div class="candidatos-lista">
+            <div *ngFor="let c of vicepresidentes" 
+                 class="boleta-card"
+                 [class.selected]="votoForm.get('idVicepresidente')?.value === c.id_candidato"
+                 (click)="seleccionarCandidato('idVicepresidente', c.id_candidato)">
+              
+              <img [src]="c.imagen_candidato || '/assets/imagenes/user-default.png'" alt="Foto">
+              <div class="boleta-info">
+                <span class="boleta-nombre">{{ c.nombre_candidato }} {{ c.apellido_candidato }}</span>
+                <span class="boleta-partido">{{ c.partido }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cargo-columna">
+          <h4>Gobernador</h4>
+          <div class="candidatos-lista">
+            <div *ngFor="let c of gobernadores" 
+                 class="boleta-card"
+                 [class.selected]="votoForm.get('idGobernador')?.value === c.id_candidato"
+                 (click)="seleccionarCandidato('idGobernador', c.id_candidato)">
+              
+              <img [src]="c.imagen_candidato || '/assets/imagenes/user-default.png'" alt="Foto">
+              <div class="boleta-info">
+                <span class="boleta-nombre">{{ c.nombre_candidato }} {{ c.apellido_candidato }}</span>
+                <span class="boleta-partido">{{ c.partido }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5">
+        <button class="btn btn-primary btn-lg" 
+                type="submit"
+                [disabled]="cargandoVoto">
+          
+          <span *ngIf="cargandoVoto" class="spinner-border spinner-border-sm"></span>
+          <span *ngIf="!cargandoVoto">CONFIRMAR VOTO</span>
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

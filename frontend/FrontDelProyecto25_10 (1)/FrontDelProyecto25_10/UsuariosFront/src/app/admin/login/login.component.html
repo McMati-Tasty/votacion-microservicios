@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Administrador</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+   
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="/assets/imagenes/imagen_2.png" width="40" height="50" alt="Logo JNE" class="me-2">
+      <span class="fw-bold text-dark">Justicia Nacional Electoral</span>
+    </a>
+
+    
+    <div class="d-flex ms-auto align-items-center">
+      <img src="/assets/imagenes/padron_1.png" width="40" height="40" alt="Logo CNE" class="me-2">
+      <span class="fw-bold text-dark">CNE - Cámara Nacional Electoral</span>
+    </div>
+  </div>
+</nav>
+
+
+<div class="bloque-institucional">
+  <div class="contenido-bloque">
+    <h2>ADMINISTRADOR</h2>
+    <p>Elecciones Nacionales</p>
+    <span>26 de Octubre de 2025</span>
+  </div>
+</div>
+
+
+<body>
+	<div class="main">  	
+	
+ 
+
+			<div class="login">
+				<form [formGroup]="loginForm" >
+					<label for="chk" aria-hidden="true">Iniciar Sesion</label>
+					<input type="email" name="email" placeholder="Email" required=""  formControlName="email" [class.is-invalid]="emailNoValido()">
+					 <span *ngIf="emailNoValido()" class="invalid-feedback">
+                       Email es requerido
+                     </span>
+					<input type="password" name="pswd" placeholder="Contraseña" required=""   formControlName="password" [class.is-invalid]="passwordNoValido()"  >
+						 <span *ngIf="passwordNoValido()" class="invalid-feedback">
+                       		Contraseña no Valida
+                     	</span>
+					<div class="login-buttons">
+          <button [disabled]="loginForm.invalid" (click)="login()">Ingresar</button>
+      <button type="button" class="btn-volver" (click)="volverHome()">Volver</button>
+      </div>
+
+				</form>
+			</div>
+	</div>
+</body>
+
+
+
+<footer class="footer-institucional">
+  <div class="footer-contenido">
+    <p>© 2025<br>
+       Poder Judicial de la Nación<br>
+       República Argentina<br>
+       Rev: 2023.16
+    </p>
+  </div>
+</footer>

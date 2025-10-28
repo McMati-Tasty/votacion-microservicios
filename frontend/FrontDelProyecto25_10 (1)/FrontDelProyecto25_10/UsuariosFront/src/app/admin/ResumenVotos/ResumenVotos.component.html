@@ -1,0 +1,62 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="/assets/imagenes/imagen_2.png" width="40" height="50" alt="Logo JNE" class="me-2">
+      <span class="fw-bold text-dark">Justicia Nacional Electoral</span>
+    </a>
+
+    <div class="d-flex ms-auto align-items-center">
+      <img src="/assets/imagenes/padron_1.png" width="40" height="40" alt="Logo CNE" class="me-2">
+      <span class="fw-bold text-dark">CNE - Cámara Nacional Electoral</span>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+<div class="container mt-4">
+  <h2>Resumen de Votos</h2>
+
+ <select id="rolSelect" [(ngModel)]="rolSeleccionado" (ngModelChange)="cambioRol($event)">
+  <option value="presidente">Presidente</option>
+  <option value="vicepresidente">Vicepresidente</option>
+  <option value="gobernador">Gobernador</option>
+</select>
+
+  <canvas id="graficoCircular" style="max-width: 600px; margin-top: 20px;"></canvas>
+
+  <h3 class="mt-4">Tabla de Resultados</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre del Candidato</th>
+        <th>Partido</th>
+        <th>Votos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of resultados">
+        <td>{{ r.nombreCompleto }}</td>
+        <td>{{ r.partido }}</td>
+        <td>{{ r.totalVotos }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Administrador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="/assets/imagenes/imagen_2.png" width="40" height="50" alt="Logo JNE" class="me-2">
+      <span class="fw-bold text-dark">Justicia Nacional Electoral</span>
+    </a>
+    <div class="d-flex ms-auto align-items-center">
+      <img src="/assets/imagenes/padron_1.png" width="40" height="40" alt="Logo CNE" class="me-2">
+      <span class="fw-bold text-dark">CNE - Cámara Nacional Electoral</span>
+    </div>
+  </div>
+</nav>
+
+<div class="bloque-institucional">
+  <div class="contenido-bloque">
+    <h2>Menu administrador</h2>
+    <p>Elecciones Nacionales</p>
+    <span>26 de Octubre de 2025</span>
+  </div>
+</div>
+
+<nav class="navbar-admin">
+  <ul>
+        <li><a routerLink="/admin" class="seleccionar">Inicio</a></li>
+        <li><a routerLink="faq" class="seleccionar">FAQ</a></li>
+        <li><a routerLink="seguridad" class="seleccionar">Seguridad y Privacidad</a></li>
+        <li class="derecha"><a (click)="logout()">Cerrar sesión</a></li>
+  </ul>
+</nav>
+
+
+<div class="imagenfondo">
+  <div class="seleccion">
+    <div class="card m-2" *ngFor="let opcion of opciones">
+      <img class="card-img-top" [src]="opcion.imagenUrl" [alt]="opcion.titulo">
+      <div class="card-body">
+        <h5 class="card-title">{{opcion.titulo}}</h5>
+        <p class="card-text">{{opcion.descripcion}}</p>
+        <button (click)="irA(opcion)" class="btn btn-primary">Ir</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="repetidor">
+  <div class="fila">
+    <div class="columna">
+      <h2>Últimas novedades</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li><strong>📅 12 de mayo:</strong> Se habilitó el simulador de votación digital para prácticas ciudadanas.</li>
+        <li><strong>🗳️ 5 de mayo:</strong> Nuevos candidatos cargados para las elecciones del distrito centro.</li>
+        <li><strong>📌 28 de abril:</strong> Cierre del padrón provisorio. Verificá tu inscripción.</li>
+      </ul>
+    </div>
+    <div class="columna">
+      <h2>¿Cómo emitir tu voto?</h2>
+      <ul>
+        <li>Ingresá a la sección <strong>Padron</strong>.</li>
+        <li>Colocá tu DNI y elegí tu mesa.</li>
+        <li>Seleccioná los candidatos y confirmá tu voto.</li>
+        <li>¡Listo! Tu voto será registrado y podrás ver los resultados.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="fila">
+    <div class="columna">
+      <h2>¿Qué se vota en esta elección?</h2>
+      <p>En esta simulación electoral se elige un representante por distrito entre los candidatos registrados. Cada distrito puede tener candidatos distintos y solo se permite un voto por ciudadano.</p>
+    </div>
+    <div class="columna">
+      <h2>Contacto institucional</h2>
+      <p>Ante cualquier duda o inconveniente, contactate con el equipo organizador de las elecciones escolares.</p>
+      <p><strong>Email:</strong> elecciones@colegio.edu.ar</p>
+      <p><strong>Teléfono:</strong> (011) 1234-5678</p>
+    </div>
+  </div>
+
+  <div class="fila">
+    <div class="columna">
+      <h3>Citas sobre democracia</h3>
+      <p>“La democracia no es el silencio, es la claridad con que se exponen los problemas y la existencia de medios para resolverlos.” — Enrique Múgica</p>
+      <p>“Votar es el derecho más básico y poderoso en una democracia.” — Barack Obama</p>
+    </div>
+    <div class="columna">
+      <h2>Preguntas frecuentes</h2>
+      <p><strong>¿Puedo votar más de una vez?</strong><br>No. El sistema valida que cada ciudadano vote una sola vez.</p>
+      <p><strong>¿Qué pasa si cierro la página mientras voto?</strong><br>Tu voto no será registrado hasta que confirmes la selección.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h3>¿Cómo funciona esta plataforma?</h3>
+  <p>Esta aplicación permite simular un proceso de elecciones en línea. Cada ciudadano registrado en el padrón puede emitir un voto válido en su distrito.</p>
+  <p>Los administradores pueden gestionar candidatos, consultar resultados y monitorear la participación.</p>
+  <hr>
+  <p style="font-size: 12px; color: #999;">Proyecto desarrollado para fines educativos. &copy;GuzmanStudios todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>

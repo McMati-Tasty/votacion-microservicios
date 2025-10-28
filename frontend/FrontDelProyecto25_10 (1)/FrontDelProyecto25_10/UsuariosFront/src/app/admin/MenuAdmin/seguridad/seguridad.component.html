@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="/assets/imagenes/imagen_2.png" width="40" height="50" alt="Logo JNE" class="me-2">
+      <span class="fw-bold text-dark">Justicia Nacional Electoral</span>
+    </a>
+
+    <div class="d-flex ms-auto align-items-center">
+      <img src="/assets/imagenes/padron_1.png" width="40" height="40" alt="Logo CNE" class="me-2">
+      <span class="fw-bold text-dark">CNE - Cámara Nacional Electoral</span>
+    </div>
+  </div>
+</nav>
+
+<div class="seguridad-page-layout">
+
+  <div class="imagenfondo3 text-center">
+    <h2>Privacidad y Seguridad del Voto</h2>
+    <p class="subtitulo">Conocé cómo cuidamos tu identidad y protegemos tu decisión electoral</p>
+  </div>
+
+  <main class="container mt-4">
+
+    <section class="section-voto-seguro">
+      <h3>Principios Fundamentales de Seguridad Electoral</h3>
+      <p class="section-description">
+        Nuestra plataforma está diseñada con los más altos estándares de seguridad y privacidad para garantizar un proceso electoral justo, transparente y confiable.
+      </p>
+
+      <div class="card-group">
+        <div class="card-voto-seguro" *ngFor="let card of cards">
+          <div class="card-header"><i class="{{ card.icon }}"></i> {{ card.titulo }}</div>
+          <div class="card-body">
+            <p>{{ card.descripcion }}</p>
+            <ul>
+              <li *ngFor="let item of card.lista"><i class="{{ item.icon }}"></i> {{ item.texto }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="text-center mt-5 mb-5">
+      <button class="btn btn-primary btn-lg">¡Votá Ahora de Forma Segura! <i class="fas fa-arrow-right"></i></button>
+    </div>
+    
+  </main>
+
+</div>

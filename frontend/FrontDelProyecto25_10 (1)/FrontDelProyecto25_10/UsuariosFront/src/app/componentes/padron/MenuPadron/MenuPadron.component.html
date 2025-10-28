@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="/assets/imagenes/imagen_2.png" width="40" height="50" alt="Logo JNE" class="me-2">
+      <span class="fw-bold text-dark">Justicia Nacional Electoral</span>
+    </a>
+
+    <div class="d-flex ms-auto align-items-center">
+      <img src="/assets/imagenes/padron_1.png" width="40" height="40" alt="Logo CNE" class="me-2">
+      <span class="fw-bold text-dark">CNE - Cámara Nacional Electoral</span>
+    </div>
+  </div>
+</nav>
+
+<div class="bloque-institucional">
+  <div class="contenido-bloque">
+    <h2>Ciudadano</h2>
+    <p>Elecciones Nacionales</p>
+    <span>26 de Octubre de 2025</span>
+  </div>
+</div>
+
+<div class="main">
+  <div class="login-wrapper">
+    <div class="titulo-menu">
+      <h3>Menú Ciudadano</h3>
+      <p>Seleccioná la acción que querés realizar</p>
+    </div>
+
+    <div class="opciones-menu">
+      <div class="card m-2">
+        <img class="card-img-top" src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/PA5VI6NG75FA3MW5G4GSNWCY6Y.jpg" alt="Padron">
+        <div class="card-body">
+          <h5 class="card-title">Ver Padrón</h5>
+          <p class="card-text">Consultar tu inscripción y datos de votación.</p>
+          <a routerLink="/padron-consulta" class="btn btn-primary">Ir</a>
+        </div>
+      </div>
+
+      <div class="card m-2">
+        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Voting_box_icon.svg/1200px-Voting_box_icon.svg.png" alt="Votar">
+        <div class="card-body">
+          <h5 class="card-title">Simular Voto</h5>
+          <p class="card-text">Emití tu voto de manera simulada.</p>
+          <a routerLink="/simulador-voto" class="btn btn-primary">Ir</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-volver" (click)="logout()">Cerrar sesión</button>
+  </div>
+</div>

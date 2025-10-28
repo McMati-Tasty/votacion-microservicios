@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand d-flex align-items-center" href="javascript:void(0)">
+      <img src="/assets/imagenes/imagen_2.png" width="40" height="50" alt="Logo JNE" class="me-2">
+      <span class="fw-bold text-dark">Justicia Nacional Electoral</span>
+    </a>
+    <div class="d-flex align-items-center">
+      <img src="/assets/imagenes/padron_1.png" width="40" height="40" alt="Logo CNE" class="me-2">
+      <span class="fw-bold text-dark">CNE - Cámara Nacional Electoral</span>
+    </div>
+  </div>
+</nav>
+
+<div class="bloque-institucional">
+  <div class="contenido-bloque">
+    <h2>PADRÓN</h2>
+    <p>Elecciones Nacionales</p>
+    <span>26 de Octubre de 2025</span>
+  </div>
+</div>
+
+<div class="main">
+  <div class="login-wrapper">
+    
+    <form [formGroup]="loginForm" (ngSubmit)="ingresar()">
+
+      <label for="dni">Iniciar Sesión Ciudadano</label>
+
+      <input type="text" 
+             placeholder="Ingrese su DNI" 
+             formControlName="dni" 
+             [class.is-invalid]="loginForm.get('dni')?.invalid && loginForm.get('dni')?.touched"
+             >
+      
+      <div *ngIf="loginForm.get('dni')?.invalid && loginForm.get('dni')?.touched" 
+           class="invalid-feedback" 
+           style="display: block; text-align: left; width: 100%; margin-top: 5px;">
+        <span *ngIf="loginForm.get('dni')?.errors?.['required']">
+          El DNI es requerido.
+        </span>
+        <span *ngIf="loginForm.get('dni')?.errors?.['pattern']">
+          Debe ingresar un DNI válido.
+        </span>
+      </div>
+
+      <div *ngIf="errorMensaje" class="alert alert-danger" style="margin-top: 15px;">
+        {{ errorMensaje }}
+      </div>
+
+      <div class="login-buttons">
+        
+        <button type="submit" [disabled]="cargando || loginForm.invalid">
+          <span *ngIf="cargando">Cargando...</span>
+          <span *ngIf="!cargando">Ingresar</span>
+        </button>
+
+        <button type="button" class="btn-volver" (click)="volver()" [disabled]="cargando">
+          Volver
+        </button>
+
+      </div>
+
+    </form>
+  </div>
+</div>

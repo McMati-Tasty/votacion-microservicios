@@ -1,0 +1,130 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .container {
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.main {
+  width: 380px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+  padding: 30px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin: 40px auto;
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.bloque-institucional {
+  width: 100vw;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 1.8rem 1rem;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  margin-bottom: 20px;
+}
+
+.contenido-bloque h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.contenido-bloque p, .contenido-bloque span {
+  color: #e0e0e0;
+}
+
+.titulo-menu h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.titulo-menu p {
+  margin: 5px 0 20px 0;
+  color: #666;
+}
+
+.opciones-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.btn-primary {
+  background-color: #56baed;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #39ace7;
+  transform: scale(1.03);
+}
+
+.btn-volver {
+  background-color: #56baed;
+  border: none;
+  color: white;
+  padding: 12px 40px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-volver:hover {
+  background-color: #39ace7;
+  transform: scale(1.03);
+}

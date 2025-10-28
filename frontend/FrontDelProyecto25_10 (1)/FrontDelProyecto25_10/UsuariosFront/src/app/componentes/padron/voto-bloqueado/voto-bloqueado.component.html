@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand d-flex align-items-center" href="javascript:void(0)">
+      <img src="/assets/imagenes/imagen_2.png" width="40" height="50" alt="Logo JNE" class="me-2">
+      <span class="fw-bold text-dark">Justicia Nacional Electoral</span>
+    </a>
+    <div class="d-flex align-items-center">
+      <img src="/assets/imagenes/padron_1.png" width="40" height="40" alt="Logo CNE" class="me-2">
+      <span class="fw-bold text-dark">CNE - Cámara Nacional Electoral</span>
+    </div>
+  </div>
+</nav>
+
+<div class="bloque-institucional">
+  <div class="contenido-bloque">
+    <h2>PADRÓN</h2>
+    <p>Elecciones Nacionales</p>
+    <span>26 de Octubre de 2025</span>
+  </div>
+</div>
+
+<div class="main">
+  <div class="mensaje-wrapper">
+    <svg class="icono-resultado text-danger" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+    </svg>
+
+    <h3 class="mt-3">No se pudo registrar su voto</h3>
+    <p class="text-muted fs-5">
+      Ha ocurrido un error al procesar su solicitud.
+    </p>
+    
+    <p class="mt-4">
+      Esto puede deberse a que el código de votación ya fue utilizado o ha expirado.
+      Por favor, póngase en contacto con la autoridad de mesa.
+    </p>
+
+    <div class="mt-5">
+      <button class="btn btn-outline-secondary btn-lg" (click)="salir()">
+        Volver al Inicio
+      </button>
+    </div>
+  </div>
+</div>

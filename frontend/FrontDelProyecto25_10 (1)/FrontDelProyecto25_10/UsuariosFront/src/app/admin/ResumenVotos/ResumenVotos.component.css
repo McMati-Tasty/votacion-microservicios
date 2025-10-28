@@ -1,0 +1,38 @@
+.container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2, h3 {
+    margin-bottom: 20px;
+}
+
+select.form-select {
+    display: inline-block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#graficoCircular {
+    display: block;
+    margin: 20px auto 0 auto; 
+    max-width: 600px;
+}

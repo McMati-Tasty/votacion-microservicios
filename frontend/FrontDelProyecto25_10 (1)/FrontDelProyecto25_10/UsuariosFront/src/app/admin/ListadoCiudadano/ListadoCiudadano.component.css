@@ -1,0 +1,48 @@
+.container-listado {
+    margin: 40px auto;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+
+.tabla-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 80%;           
+    max-width: 1000px;    
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px 15px;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 500;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    table {
+        width: 95%;
+    }
+}

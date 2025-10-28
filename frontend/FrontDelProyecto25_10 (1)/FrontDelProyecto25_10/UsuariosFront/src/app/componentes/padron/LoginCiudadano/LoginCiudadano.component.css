@@ -1,0 +1,103 @@
+.navbar-brand span, .d-flex span {
+  font-size: 1rem;
+}
+
+.bloque-institucional {
+  background-color: #343a40; 
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.contenido-bloque h2 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contenido-bloque p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+.contenido-bloque span {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  min-height: 50vh; 
+  background-color: #f8f9fa; 
+}
+
+.login-wrapper {
+  max-width: 450px;
+  width: 100%;
+  padding: 40px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-wrapper label {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.login-wrapper input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.login-wrapper input[type="text"].is-invalid {
+  border-color: #dc3545; 
+}
+
+.login-buttons {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-buttons button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.login-buttons button[type="submit"] {
+  background-color: #0d6efd; 
+  color: white;
+}
+
+.login-buttons button[type="submit"]:disabled {
+  background-color: #a0c7ff;
+  opacity: 0.7;
+}
+
+.login-buttons button.btn-volver {
+  background-color: #6c757d; 
+  color: white;
+}

@@ -1,0 +1,88 @@
+.seguridad-page-layout {
+    font-family: 'Jost', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.imagenfondo3 {
+    background: linear-gradient(90deg, #e3f2fd 0%, #bbdefb 100%);
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.imagenfondo3 h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.imagenfondo3 .subtitulo {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.section-voto-seguro h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-voto-seguro {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-voto-seguro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card-header {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #007bff;
+}
+
+.card-body ul {
+    padding-left: 20px;
+}
+
+.card-body li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.text-center .btn-primary {
+    background-color: #007bff;
+    border-radius: 6px;
+    padding: 12px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.text-center .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}

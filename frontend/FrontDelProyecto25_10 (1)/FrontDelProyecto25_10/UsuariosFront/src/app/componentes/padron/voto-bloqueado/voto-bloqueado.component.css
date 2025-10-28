@@ -1,0 +1,37 @@
+.navbar-brand span, .d-flex span {
+  font-size: 1rem;
+}
+.bloque-institucional {
+  background-color: #343a40; 
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+.contenido-bloque h2, .contenido-bloque p, .contenido-bloque span {
+  margin: 0;
+}
+
+
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f9fa; 
+  min-height: 50vh;
+}
+
+.mensaje-wrapper {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 600px;
+}
+
+.icono-resultado {
+  width: 80px;
+  height: 80px;
+}

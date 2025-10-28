@@ -1,0 +1,109 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand d-flex align-items-center" href="javascript:void(0)">
+      <img src="/assets/imagenes/imagen_2.png" width="40" height="50" alt="Logo JNE" class="me-2">
+      <span class="fw-bold text-dark">Justicia Nacional Electoral</span>
+    </a>
+    <div class="d-flex align-items-center">
+      <img src="/assets/imagenes/padron_1.png" width="40" height="40" alt="Logo CNE" class="me-2">
+      <span class="fw-bold text-dark">CNE - Cámara Nacional Electoral</span>
+    </div>
+  </div>
+</nav>
+
+<div class="bloque-institucional">
+  <div class="contenido-bloque">
+    <h2>SISTEMA DE VOTACIÓN ELECTRÓNICA</h2>
+    <p>Elecciones Nacionales</p>
+    <span>26 de Octubre de 2025</span>
+  </div>
+</div>
+
+<div class="main-content text-center">
+  <h2 class="mb-3">Bienvenido</h2>
+  <p class="lead text-muted mb-5">Seleccione el portal al que desea ingresar.</p>
+  
+  <div class="container">
+    <div class="row justify-content-center g-4">
+      
+      <div class="col-12 col-md-5">
+        <div class="portal-card" (click)="irAVotar()">
+          <div class="portal-icon text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg>
+          </div>
+          <h3 class="mt-3">Portal Ciudadano</h3>
+          <p>Ingrese aquí para emitir su voto.</p>
+          <button class="btn btn-primary btn-lg mt-auto">Ingresar al Padrón</button>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-5">
+        <div class="portal-card" (click)="irAAdmin()">
+          <div class="portal-icon text-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 11.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+              <path d="M4.5 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM11.5 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12z"/>
+            </svg>
+          </div>
+          <h3 class="mt-3">Portal de Administración</h3>
+          <p>Gestión del sistema (solo personal autorizado).</p>
+         <button class="btn btn-outline-secondary btn-lg mt-auto" routerLink="/admin">Ingresar como Admin</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section class="repetidor">
+  <div class="container">
+    
+    <div class="row">
+      <div class="columna">
+        <h2>Últimas novedades</h2>
+        <ul style="list-style: none; padding: 0;">
+          <li><strong>📅 27 de Octubre:</strong> ¡Hoy es el día! El sistema de votación está habilitado.</li>
+          <li><strong>📅 12 de Octubre:</strong> Se habilitó el padrón definitivo.</li>
+          <li><strong>📅 5 de Octubre:</strong> Nuevos candidatos cargados para las elecciones.</li>
+        </ul>
+      </div>
+
+      <div class="columna">
+        <h2>¿Cómo emitir tu voto?</h2>
+        <ul>
+          <li>Ingresá al <strong>Portal Ciudadano</strong>.</li>
+          <li>Colocá tu DNI (se enviará un código a tu email).</li>
+          <li>Ingresá el código de seguridad que recibiste.</li>
+          <li>Seleccioná tus candidatos (¡podés cortar boleta!).</li>
+          <li>¡Confirmá y listo! Tu voto será registrado.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="columna">
+        <h2>¿Qué se vota en esta elección?</h2>
+        <p>En esta elección se renuevan los cargos de Presidente, Vicepresidente y Gobernador. Cada ciudadano habilitado en el padrón puede emitir un único voto.</p>
+      </div>
+      <div class="columna">
+        <h2>Contacto institucional</h2>
+        <p>Ante cualquier duda o inconveniente, contactate con la autoridad electoral.</p>
+        <p><strong>Email:</strong> info@elecciones.gob.ar</p>
+        <p><strong>Teléfono:</strong> 0800-123-VOTO (8686)</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer-custom">
+  <div class="container">
+    <h3>¿Cómo funciona esta plataforma?</h3>
+    <p>Esta aplicación permite simular un proceso de elecciones en línea. Cada ciudadano registrado en el padrón puede emitir un voto válido.</p>
+    <p>Los administradores pueden gestionar candidatos, consultar resultados y monitorear la participación.</p>
+    <hr>
+    <p style="font-size: 12px; color: #999;">Proyecto desarrollado para fines lucrativos digo digo educativos. &copy;GuzmanStudios todos los derechos reservados</p>
+  </div>
+</footer>
